@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Load the dataset
 data = pd.read_csv('data/network_logs.csv')
@@ -37,3 +38,24 @@ print('\n=== UNUSUAL TIME ACCESS ===')
 print(
     data.groupby('attack_detected')['unusual_time_access'].mean()
 )
+
+# Create Graph
+print('\nCreating Visualizations...')
+attack_groups = data.groupby('attack_detected')[
+    ['failed_logins', 'login_attempts']
+].mean()
+
+# Generate Visualization
+attack_groups.plot(kind='bar')
+
+# Add labels and title
+plt.title('Attack vs Non-Attack Session Characteristics')
+plt.xlabel('Attack Detected')
+plt.ylabel('Average Value')
+plt.tight_layout()
+
+# Save the Graph
+plt.savefig('images/attack_comparison.png')
+
+# Display the Graph
+plt.show()
