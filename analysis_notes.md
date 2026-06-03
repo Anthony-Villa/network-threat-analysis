@@ -10,3 +10,24 @@
 ## Initial Observation
 
 The dataset is relatively balanced, which makes it suitable for analysis and future machine learning experiments.
+## Attack Indicator Analysis
+
+### Failed Logins
+
+(To be filled with results)
+
+### Login Attempts
+
+(To be filled with results)
+
+### Reputation Score
+
+(To be filled with results)
+
+### Unusual Time Access
+
+(To be filled with results)
+
+### Initial Conclusions
+
+(To be filled with observations)
