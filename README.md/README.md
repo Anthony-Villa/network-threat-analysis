@@ -28,3 +28,12 @@ The dataset contains network session information including:
 - Packet sizes
 - Reputation scores
 - Attack labels
+
+## Current Findings
+
+Initial analysis identified several characteristics associated with attack sessions:
+
+- Higher failed login counts
+- Higher login attempt counts
+- Minimal difference in unusual access times
+- Reputation scores require further investigation
