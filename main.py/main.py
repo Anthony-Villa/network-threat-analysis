@@ -1,0 +1,39 @@
+import pandas as pd
+
+# Load the dataset
+data = pd.read_csv('data/network_logs.csv')
+
+# Dataset Overview
+print('=== DATASET OVERVIEW ===')
+print(f'Rows: {len(data)}')
+print(f'Columns: {len(data.columns)}')
+
+# Column Names
+print('\n=== COLUMN NAMES ===')
+for col in data.columns:
+    print(col)
+    
+# Attack Distribution
+print('\n=== ATTACK DISTRIBUTION ===')
+print(data['attack_detected'].value_counts())
+
+# Analyze Failed Logins
+print('\n=== FAILED LOGIN ANALYSIS ===')
+failed_login_analysis = data.groupby('attack_detected')['failed_logins'].mean()
+print(failed_login_analysis)
+
+# Analyze Login Attempts
+print('\n=== LOGIN ATTEMPT ANALYSIS ===')
+login_attempt_analysis = data.groupby('attack_detected')['login_attempts'].mean()
+print(login_attempt_analysis)
+
+# Analyze IP Reputation Score
+print('\n=== REPUTATION SCORE ANALYSIS ===')
+reputation_analysis = data.groupby('attack_detected')['ip_reputation_score'].mean()
+print(reputation_analysis)
+
+# Analyze unusual access times
+print('\n=== UNUSUAL TIME ACCESS ===')
+print(
+    data.groupby('attack_detected')['unusual_time_access'].mean()
+)
