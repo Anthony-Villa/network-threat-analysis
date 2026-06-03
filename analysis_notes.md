@@ -10,7 +10,6 @@
 ## Initial Observation
 
 The dataset is relatively balanced, which makes it suitable for analysis and future machine learning experiments.
-## Attack Indicator Analysis
 
 ## Initial Findings
 
