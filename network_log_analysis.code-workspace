@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../network_log_analysis"
+		},
+		{
+			"name": "Network-Traffic-Anomaly-Detection-and-Data-Analysis",
+			"path": "../network_log_analysis/Network-Traffic-Anomaly-Detection-and-Data-Analysis"
+		}
+	],
+	"settings": {}
+}
