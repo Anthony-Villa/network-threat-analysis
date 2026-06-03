@@ -12,22 +12,20 @@
 The dataset is relatively balanced, which makes it suitable for analysis and future machine learning experiments.
 ## Attack Indicator Analysis
 
-### Failed Logins
+## Initial Findings
 
-(To be filled with results)
+The strongest indicators associated with attacks were failed logins and login attempts.
+
+### Failed Logins
+- Non-Attack: 1.18
+- Attack: 1.94
 
 ### Login Attempts
-
-(To be filled with results)
+- Non-Attack: 3.54
+- Attack: 4.64
 
 ### Reputation Score
-
-(To be filled with results)
+The reputation score behaved differently than expected and may require further investigation.
 
 ### Unusual Time Access
-
-(To be filled with results)
-
-### Initial Conclusions
-
-(To be filled with observations)
+Minimal difference was observed between attack and non-attack sessions.
