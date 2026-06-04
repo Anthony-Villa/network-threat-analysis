@@ -85,3 +85,12 @@ print(top_threats[
     ]
 ].head(10))
 
+# Analyze Threat Score by Group
+print('\n=== THREAT SCORE COMPARISON ===')
+
+print(
+    data.groupby('attack_detected')[
+        'threat_score'
+        ].mean()
+)
+
