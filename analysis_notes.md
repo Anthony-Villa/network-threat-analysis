@@ -39,3 +39,14 @@ Threat Score =
 + (3 × Unusual Time Access)
 
 The goal was to prioritize sessions for investigation based on suspicious characteristics.
+
+## Threat Scoring Results
+
+Average Threat Score
+
+- Non-Attack Sessions: 6.79
+- Attack Sessions: 9.63
+
+Attack sessions exhibited approximately 42% higher threat scores.
+
+The top 10 highest-scoring sessions were all labeled as attacks, suggesting the scoring methodology effectively prioritized suspicious activity.
