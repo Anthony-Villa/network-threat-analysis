@@ -94,3 +94,19 @@ print(
         ].mean()
 )
 
+# Threat Score Visualization
+plt.figure()
+
+data.groupby('attack_detected')[
+    'threat_score'
+].mean().plot(kind='bar')
+
+plt.title('Average Threat Score by Attack Status')
+plt.xlabel('Attack Detected')
+plt.ylabel('Average Threat Score')
+
+plt.tight_layout()
+
+plt.savefig('images/threat_score_comparison.png')
+
+plt.show()
