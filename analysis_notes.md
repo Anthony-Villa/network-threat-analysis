@@ -28,3 +28,14 @@ The reputation score behaved differently than expected and may require further i
 
 ### Unusual Time Access
 Minimal difference was observed between attack and non-attack sessions.
+
+## Threat Scoring
+
+A simple threat scoring system was created using:
+
+Threat Score =
+(2 × Failed Logins)
++ Login Attempts
++ (3 × Unusual Time Access)
+
+The goal was to prioritize sessions for investigation based on suspicious characteristics.
