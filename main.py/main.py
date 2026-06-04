@@ -69,3 +69,19 @@ data['threat_score'] = (
     + data['ip_reputation_score'] * 3
 )
 
+# Highest Risk Sessions
+top_threats = data.sort_values(
+    by='threat_score',
+    ascending=False
+)
+
+print(top_threats[
+    [
+        'session_id',
+        'threat_score',
+        'failed_logins',
+        'login_attempts',
+        'attack_detected'
+    ]
+].head(10))
+
