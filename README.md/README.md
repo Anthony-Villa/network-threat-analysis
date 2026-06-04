@@ -37,3 +37,12 @@ Initial analysis identified several characteristics associated with attack sessi
 - Higher login attempt counts
 - Minimal difference in unusual access times
 - Reputation scores require further investigation
+
+## Visualizations
+
+The project includes visual analysis comparing attack and non-attack sessions based on:
+
+- Failed logins
+- Login attempts
+
+Initial results indicate attack sessions exhibit higher authentication-related activity.
