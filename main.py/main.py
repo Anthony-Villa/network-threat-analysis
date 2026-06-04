@@ -61,7 +61,7 @@ plt.savefig('images/attack_comparison.png')
 plt.show()
 
 # Create Threat Score
-print('\n=== THREAT SCOREING ===')
+print('\n=== THREAT SCORING ===')
 
 data['threat_score'] = (
     data['failed_logins'] * 2
