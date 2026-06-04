@@ -59,3 +59,13 @@ plt.savefig('images/attack_comparison.png')
 
 # Display the Graph
 plt.show()
+
+# Create Threat Score
+print('\n=== THREAT SCOREING ===')
+
+data['threat_score'] = (
+    data['failed_logins'] * 2
+    + data['login_attempts']
+    + data['ip_reputation_score'] * 3
+)
+
