@@ -171,3 +171,7 @@ plt.show()
 # Anomaly Attack Rate
 print('\n=== ANOMALY ATTACK RATE ===')
 print(anomalies['attack_detected'].value_counts(normalize=True) * 100)
+
+# Compare Against Entire Dataset
+print('\n=== OVERALL ATTACK RATE')
+print(data['attack_detected'].value_counts(normalize=True) * 100)
