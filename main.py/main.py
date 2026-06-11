@@ -164,6 +164,6 @@ plt.legend()
 
 plt.tight_layout()
 
-plt.savefig('images/packet_size_anomalies.png')
+plt.savefig('images/packet_size_distribution.png')
 
 plt.show()
