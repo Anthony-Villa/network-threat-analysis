@@ -110,3 +110,9 @@ plt.tight_layout()
 plt.savefig('images/threat_score_comparison.png')
 
 plt.show()
+
+# Anomaly Detection
+
+# Analyze packet sizes
+print('\n=== PACKET SIZE ANALYSIS ===')
+print(data['network_packet_size'].describe())
