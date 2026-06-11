@@ -139,7 +139,7 @@ print(
     anomalies[
         [
             'session_id',
-            'network_packet_size'
+            'network_packet_size',
             'attack_detected'
         ]
     ].head(10)
