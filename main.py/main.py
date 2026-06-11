@@ -167,3 +167,7 @@ plt.tight_layout()
 plt.savefig('images/packet_size_distribution.png')
 
 plt.show()
+
+# Anomaly Attack Rate
+print('\n=== ANOMALY ATTACK RATE ===')
+print(anomalies['attack_detected'].value_counts(normalize=True) * 100)
