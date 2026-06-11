@@ -116,3 +116,12 @@ plt.show()
 # Analyze packet sizes
 print('\n=== PACKET SIZE ANALYSIS ===')
 print(data['network_packet_size'].describe())
+
+# Anomoly Threshold
+packet_mean = data['network_packet_size'].mean()
+packet_std = data['network_packet_size'].std()
+
+packet_threshold = packet_mean + (2 * packet_std)
+
+print('\nPacket Size Threshold:')
+print(packet_threshold)
