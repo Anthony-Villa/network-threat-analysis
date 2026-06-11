@@ -144,3 +144,26 @@ print(
         ]
     ].head(10)
 )
+
+# Visualize Anomalies
+plt.figure()
+
+data['network_packet_size'].hist(bins=30)
+
+plt.axvline(
+    packet_threshold,
+    linestyle='--',
+    label='Anomaly Threshold'
+)
+
+plt.title('Network Packet Size Distribution')
+plt.xlabel('Packet Size')
+plt.ylabel('Frequency')
+
+plt.legend()
+
+plt.tight_layout()
+
+plt.savefig('images/packet_size_anomalies.png')
+
+plt.show()
