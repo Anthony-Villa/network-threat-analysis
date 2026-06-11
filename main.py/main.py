@@ -127,9 +127,20 @@ print('\nPacket Size Threshold:')
 print(packet_threshold)
 
 # Identify Anomalous Sessions
-anoamolies = data[
+anomalies = data[
     data['network_packet_size'] > packet_threshold
 ]
 
 print('\n=== PACKET SIZE ANOMALIES ===')
-print(f'Anomolies Found: {len(anoamolies)}')
+print(f'Anomalies Found: {len(anomalies)}')
+
+# Examine Top Anomalies
+print(
+    anomalies[
+        [
+            'session_id',
+            'network_packet_size'
+            'attack_detected'
+        ]
+    ].head(10)
+)
