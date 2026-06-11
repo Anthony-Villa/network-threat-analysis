@@ -125,3 +125,11 @@ packet_threshold = packet_mean + (2 * packet_std)
 
 print('\nPacket Size Threshold:')
 print(packet_threshold)
+
+# Identify Anomalous Sessions
+anoamolies = data[
+    data['network_packet_size'] > packet_threshold
+]
+
+print('\n=== PACKET SIZE ANOMALIES ===')
+print(f'Anomolies Found: {len(anoamolies)}')
