@@ -206,3 +206,8 @@ model.fit(x_train, y_train)
 
 # Make Predictions
 predictions = model.predict(x_test)
+
+# Measure Accuracy
+accuracy = accuracy_score(y_test, predictions)
+
+print(f'\nModel Accuracy: {accuracy:.2%}')
