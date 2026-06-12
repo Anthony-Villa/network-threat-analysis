@@ -231,3 +231,24 @@ importance = importance.sort_values(
 print(importance)
 
 
+# Create Visualization
+plt.figure()
+
+plt.bar(
+    importance['Feature'],
+    importance['Coefficient']
+)
+
+plt.title('Feature Importance')
+plt.xlabel('Feature')
+plt.ylabel('Coefficient')
+
+plt.xticks(rotation=45)
+
+plt.tight_layout()
+
+plt.savefig(
+    'images/feature_importance.png'
+)
+
+plt.show()
