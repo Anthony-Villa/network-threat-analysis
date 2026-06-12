@@ -198,3 +198,8 @@ y = data['attack_detected']
 
 # Split Training and Testing Data
 x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create and Train the Model
+model = LogisticRegression(max_iter=1000)
+
+model.fit(x_train, y_train)
