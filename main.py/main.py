@@ -211,3 +211,7 @@ predictions = model.predict(x_test)
 accuracy = accuracy_score(y_test, predictions)
 
 print(f'\nModel Accuracy: {accuracy:.2%}')
+
+# Print Classification Report
+print('\n=== CLASSIFICATION REPORT ===')
+print(classification_report(y_test, predictions))
