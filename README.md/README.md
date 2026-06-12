@@ -1,48 +1,99 @@
 # Network Threat Analysis
 
-## Overview
+A cybersecurity and machine learning project focused on identifying malicious network sessions through exploratory data analysis, threat scoring, anomaly detection, and machine learning classification.
 
-This project analyzes network session data to identify patterns associated with cyber attacks.
+## Project Overview
 
-The project uses Python, Pandas, and Matplotlib to:
+This project analyzes network session data to determine which characteristics are most strongly associated with malicious activity.
 
-- Explore network activity
-- Analyze attack indicators
-- Visualize suspicious behavior
-- Investigate cybersecurity trends
+The workflow includes:
 
-## Technologies
+* Exploratory Data Analysis (EDA)
+* Threat Scoring
+* Anomaly Detection
+* Machine Learning Classification
+* Feature Importance Analysis
 
-- Python
-- Pandas
-- Matplotlib
-- Git
-- GitHub
+## Technologies Used
+
+* Python
+* Pandas
+* Matplotlib
+* Scikit-Learn
+* Git
+* GitHub
 
 ## Dataset
 
-The dataset contains network session information including:
+The dataset contains 9,537 network sessions and 11 features related to authentication behavior, network activity, and reputation metrics.
 
-- Login attempts
-- Failed logins
-- Packet sizes
-- Reputation scores
-- Attack labels
+Target Variable:
 
-## Current Findings
+* attack_detected
 
-Initial analysis identified several characteristics associated with attack sessions:
+## Key Findings
 
-- Higher failed login counts
-- Higher login attempt counts
-- Minimal difference in unusual access times
-- Reputation scores require further investigation
+### Strong Indicators
 
-## Visualizations
+* IP Reputation Score
+* Failed Login Attempts
+* Login Attempts
 
-The project includes visual analysis comparing attack and non-attack sessions based on:
+### Weak Indicators
 
-- Failed logins
-- Login attempts
+* Network Packet Size
+* Unusual Time Access
 
-Initial results indicate attack sessions exhibit higher authentication-related activity.
+## Threat Scoring Results
+
+A custom threat scoring system was developed to prioritize suspicious sessions.
+
+Average Threat Score:
+
+* Non-Attack: 6.79
+* Attack: 9.63
+
+The top 10 highest-scoring sessions were all labeled as attacks.
+
+## Machine Learning Results
+
+Model:
+
+* Logistic Regression
+
+Performance:
+
+* Accuracy: 73.9%
+* Precision: 74%
+* Recall: 65%
+* F1 Score: 69%
+
+## Repository Structure
+
+network-threat-analysis/
+
+├── data/
+
+├── images/
+
+├── main.py
+
+├── analysis_notes.md
+
+├── requirements.txt
+
+└── README.md
+
+## Future Improvements
+
+* Additional feature engineering
+* More advanced machine learning models
+* Real-time monitoring dashboard
+* Hyperparameter optimization
+* Cross-validation testing
+
+## Author
+
+Anthony Villagomez
+
+Bachelor of Science in Computer Science
