@@ -1,5 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
 
 # Load the dataset
 data = pd.read_csv('data/network_logs.csv')
@@ -175,3 +179,15 @@ print(anomalies['attack_detected'].value_counts(normalize=True) * 100)
 # Compare Against Entire Dataset
 print('\n=== OVERALL ATTACK RATE')
 print(data['attack_detected'].value_counts(normalize=True) * 100)
+
+
+# ML Model Creation
+print('\n=== MACHINE LEARNING MODEL ===')
+
+features = [
+    'failed_logins',
+    'login_attempts',
+    'ip_reputation_score',
+    'unusual_time_access',
+    'network_packet_size'
+]
