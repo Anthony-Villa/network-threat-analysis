@@ -203,3 +203,6 @@ x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 model = LogisticRegression(max_iter=1000)
 
 model.fit(x_train, y_train)
+
+# Make Predictions
+predictions = model.predict(x_test)
