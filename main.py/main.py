@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
 
 # Load the dataset
 data = pd.read_csv('data/network_logs.csv')
@@ -215,6 +216,15 @@ print(f'\nModel Accuracy: {accuracy:.2%}')
 # Print Classification Report
 print('\n=== CLASSIFICATION REPORT ===')
 print(classification_report(y_test, predictions))
+
+# Confusion Matrix
+cm = confusion_matrix(
+    y_test,
+    predictions
+)
+
+print('\n=== CONFUSION MATRIX ===')
+print(cm)
 
 # Feature Importance
 
