@@ -191,3 +191,7 @@ features = [
     'unusual_time_access',
     'network_packet_size'
 ]
+
+# Create X and Y
+X = data[features]
+y = data['attack_detected']
